@@ -1,0 +1,11 @@
+Crear una aplicación crud por consola:
+Crer una aplicación que permite gestionar la inscripción de alumnos a una materia asociada a un curso, turno.
+Para ello crear las siguientes clases: Alumno(matricula:number, nombre:string, apellido:string), Materia (id, Curso,Turno), Aplicacion, Menu,DatosDBMemoria.
+Los datos se deben leer desde teclado (de ser posible validar formato, ej: id es Long nombre de alumno es String)
+Recomendaciones:
+* crear la clase Menu lo cual permitirá mostrar las difrentes opciones de menú (inscribir, eliminar inscripcion, buscar inscripcion)
+- la clase Aplicacion que será el main de la aplicación: instanciará los objetos necesarios. ej: Menu, Alumno etc
+- la clase DatosDBMemoria que permitirá guardar internamente los datos en un array. Esta clase contendrá las inscripciones.
+Podemos agregarle métodos que faciliten la busqueda, inscripion, eliminacion.
+Incorporar Exceptions propias (mínimo dos) en la clase y método que considere necesario
+Puede crear mas clases de ser necesarias
