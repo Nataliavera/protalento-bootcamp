@@ -23,7 +23,7 @@ import ar.com.educacionit.dao.jdbc.util.DTOUtils;
  * @param <Entiy>
  * 
  */
-public abstract class JDBCDaoBase<T extends Entiy, Entiy> implements GenericDao<T> {
+public abstract class JDBCDaoBase<T extends Entity> implements GenericDao<T> {
 
 	protected String tabla;
 	protected Class<T> clazz;

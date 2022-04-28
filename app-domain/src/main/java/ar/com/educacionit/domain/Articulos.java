@@ -16,6 +16,7 @@ public class Articulos {
 	private Categorias categoria;
 
 	// hacia la db
+	
 	public Articulos(String titulo, Date fechaCreacion, String codigo, Double precio, Integer stock, Long marcaId,
 			Long categoriaId) {
 		this.titulo = titulo;
@@ -41,6 +42,12 @@ public class Articulos {
 	}
 	// constructor
 	// alt+shift+s
+
+	public Articulos(Long id, String titulo, Double precio) {
+		this.id= id;
+		this.titulo = titulo; 
+		this.precio = precio;
+	}
 
 	public Double getPrecio() {
 		return this.precio;

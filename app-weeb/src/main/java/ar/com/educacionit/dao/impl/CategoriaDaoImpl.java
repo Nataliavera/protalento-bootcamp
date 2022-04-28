@@ -6,56 +6,33 @@ import java.sql.SQLException;
 import ar.com.educacionit.dao.CategoriaDao;
 import ar.com.educacionit.domain.Categorias;
 
-public class CategoriaDaoImpl extends JDBCDaoBase<Categorias> implements CategoriaDao{
+public class CategoriaDaoImpl extends JDBCDaoBase<Categorias> implements CategoriaDao {
 
 	public CategoriaDaoImpl() {
-		super("categorias");
+		super("CATEGORIAS");
 	}
 
 	@Override
 	public String getSaveSQL() {
-		return ("(descripcion, codigo, habilitada) values(?,?,?)");
-	}
-
-	@Override
-	protected void save(PreparedStatement st, Categorias entity) throws SQLException {
-//	INSERT INTO CATEGORIAS ()	
-		st.setString(1, entity.getDescripcion());
-		st.setString(2, entity.getCodigo());
-	}
-	@Override
-	public String getUpdateSQL() {
-		return "descripcion = ?";
-	}
-
-	@Override
-	protected void update(PreparedStatement st, Categorias entity) throws SQLException {
-		st.setString(1, entity.getDescripcion());
-		st.setLong(2, entity.getHabilitada());
+		return ("(descripcion,codigo,habilitada) values(?,?,?)");
 	}
 	
-	/*public Categorias getOne(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+	protected void save(PreparedStatement st, Categorias entity) throws SQLException {
+		//inser insto categorias (
+		st.setString(1, entity.getDescripcion());
+		st.setString(2, entity.getCodigo());
+		st.setLong(3, entity.getHabilitada());
 	}
-
-	public void delete(Long id) {
-		// TODO Auto-generated method stub
-		
+	
+	@Override
+	public String getUpdateSQL() {
+		return "descripcion=?, habilitada=?";
 	}
-
-	public Categorias save(Categorias entity) {
-		// TODO Auto-generated method stub
-		return null;
+ 
+	@Override
+	protected void update(PreparedStatement st, Categorias entity) throws SQLException {
+		st.setString(1,entity.getDescripcion());
+		st.setLong(2,entity.getHabilitada());
 	}
-
-	public void update(Categorias entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public Categorias[] findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
+	
 }
