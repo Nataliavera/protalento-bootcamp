@@ -27,6 +27,13 @@ public class Articulos {
 		this.categoriaId = categoriaId;
 	}
 
+	public Articulos(Long id, String titulo, Double precio) {
+		super();
+		this.id = id;
+		this.titulo = titulo;
+		this.precio = precio;
+	}
+
 	// desde la db
 	public Articulos(Long id, String titulo, Date fechaCreacion, String codigo, Double precio, Integer stock,
 			Long marcaId, Long categoriaId) {
