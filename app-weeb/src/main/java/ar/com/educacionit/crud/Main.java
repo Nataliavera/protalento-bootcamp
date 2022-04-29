@@ -33,23 +33,23 @@ public class Main {
 				
 				Long id; 
 				String titulo;
-				Data data = new Data();
+//				Data data1 = new Data();
 				if(opcion == 1) {
 					id = teclado.nextLong();
 					titulo = teclado.next();
-					data.setId(id);
-					data.setTitulo(titulo);
+					data1.setId(id);
+					data1.setTitulo(titulo);
 				}else if(opcion == 2) {
 					id = teclado.nextLong();
-					data.setId(id);
+					data1.setId(id);
 				}else if(opcion == 3) {
 					titulo = teclado.next();
-					data.setTitulo(titulo);
+					data1.setTitulo(titulo);
 				}else {
 					 id = teclado.nextLong();
-					 data.setId(id);
+					 data1.setId(id);
 				}
-				ej.ejecutar(data);
+				ej.ejecutar(data1);
 				if (ej instanceof Alta) {
 //					SOLO SI ES ALTA CREAR() DOWN CASTING
 					Alta alta = (Alta) ej;

@@ -63,4 +63,10 @@ public class CSVFileParser extends BaseFile implements IParser<Collection<Articu
 		return articulos;
 	}
 
+	@Override
+	public Collection<Articulos> parse() throws ParseException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

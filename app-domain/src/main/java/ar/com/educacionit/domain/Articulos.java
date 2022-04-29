@@ -9,14 +9,14 @@ public class Articulos {
 	private Date fechaCreacion;
 	private String codigo;
 	private Double precio;
-	private Integer stock;
+	private Long stock;
 	private Long marcaId;
 	// private Marcas marca;
 	private Long categoriaId;
 	private Categorias categoria;
 
 	// hacia la db
-	public Articulos(String titulo, Date fechaCreacion, String codigo, Double precio, Integer stock, Long marcaId,
+	public Articulos(String titulo, Date fechaCreacion, String codigo, Double precio, Long stock, Long marcaId,
 			Long categoriaId) {
 		this.titulo = titulo;
 		this.fechaCreacion = fechaCreacion;
@@ -35,7 +35,7 @@ public class Articulos {
 	}
 
 	// desde la db
-	public Articulos(Long id, String titulo, Date fechaCreacion, String codigo, Double precio, Integer stock,
+	public Articulos(Long id, String titulo, Date fechaCreacion, String codigo, Double precio, Long stock,
 			Long marcaId, Long categoriaId) {
 		this.id = id;
 		this.titulo = titulo;
@@ -48,6 +48,9 @@ public class Articulos {
 	}
 	// constructor
 	// alt+shift+s
+
+	public Articulos() {
+	}
 
 	public Double getPrecio() {
 		return this.precio;
@@ -90,11 +93,11 @@ public class Articulos {
 		this.codigo = codigo;
 	}
 
-	public Integer getStock() {
+	public Long getStock() {
 		return stock;
 	}
 
-	public void setStock(Integer stock) {
+	public void setStock(Long stock) {
 		this.stock = stock;
 	}
 
