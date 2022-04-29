@@ -25,7 +25,7 @@ public class CategoriaDaoImpl extends JDBCDaoBase<Categorias> implements Categor
 	}
 	@Override
 	public String getUpdateSQL() {
-		return "descripcion = ?";
+		return "descripcion =?, habilitada =?";
 	}
 
 	@Override
